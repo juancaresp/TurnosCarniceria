@@ -1,0 +1,35 @@
+<%- include('cabecera', {titulo: 'Carniceria - Juan Carlos Calleja' }) -%>
+  <div class="section">
+    <div class="container">
+      <br><br>
+      <h1 class="header center-align">Carniceria de Juan Carlos Calleja</h1>
+      <div class="row center-align">
+        <h5 class="header col s12">
+          Turno Actual <div id="turnoActual"></div>
+        </h5>
+      </div>
+      <div class="row center-align">
+        <p>Tu turno <%=turno%>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let socket = new WebSocket("ws://localhost:8080/turno");
+    socket.onopen = function (e) {
+      console.log("socket abierto")
+      socket.send("Abrir");
+    };
+    socket.onmessage = function (event) {
+      const mensaje = event.data
+      salida = document.getElementById("turnoActual")
+      console.log(mensaje);
+      salida.innerHTML = `${mensaje}`;
+    };
+    
+  </script>
+
+  <br><br>
+  </div>
+  <%- include('pie') -%>

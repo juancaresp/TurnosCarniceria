@@ -130,15 +130,17 @@ app.ws('/turno', function (ws, req) {
         if(msg=="Abrir"){
             enviado=turnoActual
             ws.send(enviado)
-        }else{
-            enviado=++turnoActual
-
+        }else {
+            if(msg=="pasar"){
+                enviado=++turnoActual
+            }else if(msg=="resetear"){
+                turnoActual=0
+                enviado=turnoActual
+            }
             for(let n = 0; n < sockets.length; n++) {
                 sockets[n].send(enviado)
             }
-        }
-        
-        
+        }  
     });
 
     ws.on('close', () => {

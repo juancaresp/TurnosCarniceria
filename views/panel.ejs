@@ -19,12 +19,21 @@
                 Pasar Turno
               </a>
             </div>
+            <div class="row center-align">
+              <a class="waves-effect waves-light blue lighten-1 btn col s2 offset-s5 z-depth-5" onclick="resetear()">
+                Resetear
+              </a>
+            </div>
 
             <script>
               let socket = new WebSocket("ws://localhost:8080/turno");
 
               function pasarturno(){
                 socket.send("pasar");
+              }
+
+              function resetear(){
+                socket.send("resetear");
               }
 
               socket.onopen = function (e) {

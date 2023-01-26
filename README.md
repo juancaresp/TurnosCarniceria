@@ -6,14 +6,14 @@
 
 -Ir con un terminal hasta la carpeta y ejecutar el siguiente comando:
 
-'''bash
+```bash
 npm install
-'''
+```
 
 -Ejecutar en esa misma carpeta el comando:
 
-'''bash
+```bash
 node app
-'''
+```
 
 -Por ultimo abrir el navegador y acceder a la web localhost:8080

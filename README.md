@@ -1,19 +1,19 @@
-# TurnosCarniceria
- Practica de gestion de turnos en una carniceria mediante WebSockets
+# Turns Butcher shop
+ Practice managing turns in a butcher shop using WebSockets
 
-# Pasos para que funcione
--Clonar el repsotorio en una carpeta
+# Steps to start the server
+-Clone the repository on your directory
 
--Ir con un terminal hasta la carpeta y ejecutar el siguiente comando:
+-Go whit the terminal to your directory and run the command:
 
 ```bash
 npm install
 ```
 
--Ejecutar en esa misma carpeta el comando:
+-Run in the same directory the command:
 
 ```bash
 node app
 ```
 
--Por ultimo abrir el navegador y acceder a la web localhost:8080
+-And the final step is open your browser and go to localhost:8080
